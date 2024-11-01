@@ -58,7 +58,7 @@ jobs:
         with:
           rm: true
           source: '.'
-          target: ~/fleetchat/
+          target: ~/fleetchat-frontend/
           host: ${{ secrets.SERVER_HOST }}
           port: ${{ secrets.SERVER_PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -73,5 +73,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           envs: $SERVER_PATH
           script: |
-            cd ~/fleetchat
+            cd ~/fleetchat-frontend
             docker-compose -f docker-compose.yml up -d --build
