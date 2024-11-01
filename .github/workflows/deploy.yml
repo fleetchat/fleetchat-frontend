@@ -75,5 +75,3 @@ jobs:
           script: |
             cd ~/fleetchat-frontend
             docker-compose -f docker-compose.yml up -d --build
-            chown -R root:deployers ~/fleetchat-frontend/certbot
-            chmod -R 775 ~/fleetchat-frontend/certbot 
