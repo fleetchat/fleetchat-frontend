@@ -10,9 +10,10 @@ services:
     volumes:
       - ~/certbot/www:/var/www/certbot
       - /etc/letsencrypt:/etc/letsencrypt:ro
-    restart: always
+    restart: unless-stopped
     networks:
-      - mynetwork
+      - shared-network
 
 networks:
-  mynetwork:
+  shared-network:
+    external: true
