@@ -11,3 +11,9 @@ services:
       - ~/certbot/www:/var/www/certbot
       - /etc/letsencrypt:/etc/letsencrypt:ro
     restart: always
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    external: true
